@@ -1,0 +1,7 @@
+.card__button {
+  background-image: url(../../../images/LikeWhite.svg);
+  height: 19px;
+  width: 22px;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
