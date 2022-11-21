@@ -4,4 +4,6 @@
   width: 22px;
   background-repeat: no-repeat;
   object-fit: cover;
+  align-self: center;
+  margin: 0;
 }

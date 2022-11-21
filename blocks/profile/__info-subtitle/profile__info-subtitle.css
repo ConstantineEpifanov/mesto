@@ -1,0 +1,13 @@
+.profile__info-subtitle {
+  margin: 0;
+  max-width: 336px;
+  max-height: 22px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  grid-area: subtitle;
+  text-overflow: ellipsis;
+  align-self: baseline;
+}
