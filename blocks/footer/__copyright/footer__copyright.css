@@ -9,3 +9,13 @@
   color: rgba(84, 84, 84, 1);
   margin: 67px 0 60px;
 }
+
+@media screen and (max-width: 500px) {
+  .footer__copyright {
+    max-width: calc(100% - 19px*2);
+    margin-top: 48px;
+    margin-bottom: 36px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

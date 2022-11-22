@@ -6,4 +6,14 @@
   object-fit: cover;
   align-self: center;
   margin: 0;
+  transition: opacity ease-in .3s;
+}
+
+.card__button:hover {
+  cursor: pointer;
+  opacity: .5;
+}
+
+.card__button:active {
+  background-image: url(../../../images/LikeBlack.svg);
 }
