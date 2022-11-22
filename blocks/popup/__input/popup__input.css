@@ -13,8 +13,18 @@
   line-height: 17px;
   color: #000000;
   text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.popup__input:last-of-type {
+.popup__input:last-child {
   margin-bottom: 51px;
+}
+
+@media screen and (max-width: 550px) {
+  .popup__input {
+    width: 238px;
+    height: 27px;
+  }
 }

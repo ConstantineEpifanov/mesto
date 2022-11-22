@@ -1,7 +1,6 @@
 .profile__info-subtitle {
   margin: 0;
   max-width: 336px;
-  max-height: 22px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -9,6 +8,8 @@
   line-height: 22px;
   grid-area: subtitle;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   align-self: baseline;
 }
 
@@ -18,5 +19,12 @@
     line-height: 17px;
     text-align: center;
     margin-top: 14px;
+    max-width: calc(100% - 19px*2);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .profile__info-subtitle {
+    max-width: 100%;
   }
 }

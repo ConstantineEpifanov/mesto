@@ -1,7 +1,6 @@
 .profile__info-title {
   margin: 0;
   max-width: 294px;
-  max-height: 39px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
@@ -9,6 +8,8 @@
   line-height: 48px;
   grid-area: title;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   box-sizing: border-box;
 }
 
@@ -16,5 +17,11 @@
   .profile__info-title {
     font-size: 27px;
     line-height: 33px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .profile__info-title  {
+    max-width: 100%;
   }
 }

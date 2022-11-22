@@ -1,4 +1,4 @@
-.popup__form {
+.popup__container {
   display: flex;
   position: relative;
   background-color: white;
@@ -9,5 +9,11 @@
   border-radius: 10px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   align-items: center;
-  z-index: 2;
+}
+
+@media screen and (max-width: 550px) {
+  .popup__container {
+    width: 282px;
+    height: 322px;
+  }
 }

@@ -12,10 +12,15 @@
 
 @media screen and (max-width: 500px) {
   .footer__copyright {
-    max-width: calc(100% - 19px*2);
     margin-top: 48px;
     margin-bottom: 36px;
     font-size: 14px;
     line-height: 17px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .footer__copyright {
+    margin-left: 19px;
   }
 }
