@@ -5,13 +5,14 @@
     'title button'
     'subtitle subtitle';
   column-gap: 23px;
-  margin-top: 22px;
+  margin-top: 23px;
 }
 
 
 @media screen and (max-width: 500px) {
   .profile__info {
-    margin-top: 26px;
+    margin-top: 22px;
+    column-gap: 10px;
   }
 }
 
