@@ -4,7 +4,10 @@
   width: 22px;
   background-repeat: no-repeat;
   align-self: center;
+  background-color: transparent;
   margin: 0;
+  padding: 0;
+  border: 0;
   transition: opacity ease-in .3s;
 }
 
