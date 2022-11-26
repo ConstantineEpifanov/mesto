@@ -4,8 +4,7 @@
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
   width: 358px;
-  height: 27px;
-  margin-bottom: 29px;
+  margin-bottom: 27px;
   font-family: 'Inter', Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -17,11 +16,13 @@
   overflow: hidden;
   align-self: baseline;
   vertical-align: top;
+  padding-bottom: 13px;
 }
 
 @media screen and (max-width: 550px) {
   .popup__input {
     width: 238px;
-    height: 27px;
+    padding-bottom: 10px;
+    margin-bottom: 28px;
   }
 }
