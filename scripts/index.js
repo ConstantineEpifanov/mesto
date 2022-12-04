@@ -153,3 +153,4 @@ popupImageButtonClose.addEventListener('click', function () { closePopup(popupIm
 
 
 
+// надо опасити у попапов, попап с картинкой
