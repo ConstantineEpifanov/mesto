@@ -5,7 +5,7 @@ let cardForm = document.querySelector('.popup__form_card');
 let cardTitleInput = cardForm.querySelector('.popup__input_edit_title');
 let cardUrlInput = cardForm.querySelector('.popup__input_edit_img');
 
-//Delete buttons
+
 
 
 const handleLikeButtonClick = (e) => {
@@ -143,8 +143,3 @@ popupCardFormButtonClose.addEventListener('click', function () {
  });
 
 popupImageButtonClose.addEventListener('click', function () { closePopup(popupImage) });
-
-
-
-
-
