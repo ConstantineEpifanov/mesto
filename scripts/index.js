@@ -1,7 +1,7 @@
 import { initialCards } from './cards.js'
 
 // Card Form
-let cardForm = document.querySelector('.popup_card-form');
+let cardForm = document.querySelector('.popup__form_card');
 let cardTitleInput = cardForm.querySelector('.popup__input_edit_title');
 let cardUrlInput = cardForm.querySelector('.popup__input_edit_img');
 
@@ -101,7 +101,7 @@ const closePopup = function (item) {
 };
 
 // Profile
-let profileForm = document.querySelector('.popup_profile-form');
+let profileForm = document.querySelector('.popup__form_profile');
 let nameInput = profileForm.querySelector('.popup__input_edit_name');
 let jobInput = profileForm.querySelector('.popup__input_edit_status');
 let profileTitle = document.querySelector('.profile__info-title');
@@ -129,12 +129,22 @@ profileForm.addEventListener('submit', profileFormSubmitHandler);
 popupCards.addEventListener('submit', cardFormSubmitHandler);
 
 popupProfileFormButtonOpen.addEventListener('click', function () { openPopup(popupProfile) });
-popupProfileFormButtonClose.addEventListener('click', function () { closePopup(popupProfile) });
+popupProfileFormButtonClose.addEventListener('click', function () {
+  closePopup(popupProfile);
+  nameInput.value = profileTitle.textContent;
+  jobInput.value = profileSubtitle.textContent;
+ });
+
 popupCardFormButtonOpen.addEventListener('click', function () { openPopup(popupCards) });
-popupCardFormButtonClose.addEventListener('click', function () { closePopup(popupCards) });
+popupCardFormButtonClose.addEventListener('click', function () {
+  closePopup(popupCards);
+  cardTitleInput.value = '';
+  cardUrlInput.value = '';
+ });
+
 popupImageButtonClose.addEventListener('click', function () { closePopup(popupImage) });
 
 
 
 
-// попап с картинкой и обнуление после закрытия попаов у инпутов
+
