@@ -52,19 +52,13 @@ const handleDeleteButtonClick = (e) => {
 
 
 const handleImageButtonClick = (e) => {
-  openPopup(popupImage);
   const imageTitle = e.target.closest('.card').querySelector('.card__title')
   imageFull.src = e.target.src
   imageFull.alt = e.target.alt
   imageFullTitle.textContent = imageTitle.textContent
+  openPopup(popupImage);
 }
 
-
-
-//Like button toggle
-const likeCard = function () {
-  cardLikeButton.classList.toggle('card__button-like_active');
-};
 
 const openPopup = function (item) {
   item.classList.add('popup_opened');
@@ -75,7 +69,7 @@ const closePopup = function (item) {
 };
 
 
-function profileFormSubmitHandler(evt) {
+function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileTitle.textContent = nameInput.value;
   profileSubtitle.textContent = jobInput.value;
@@ -83,7 +77,7 @@ function profileFormSubmitHandler(evt) {
 };
 
 
-function cardFormSubmitHandler(evt) {
+function handleCardFormSubmit(evt) {
   evt.preventDefault();
   renderCard({
     name: cardTitleInput.value,
@@ -93,24 +87,28 @@ function cardFormSubmitHandler(evt) {
 };
 
 
+//Listeners
+profileForm.addEventListener('submit', handleProfileFormSubmit);
 
-profileForm.addEventListener('submit', profileFormSubmitHandler);
-popupCards.addEventListener('submit', cardFormSubmitHandler);
+popupCards.addEventListener('submit', handleCardFormSubmit);
 
 popupProfileFormButtonOpen.addEventListener('click', function () {
   nameInput.value = profileTitle.textContent;
   jobInput.value = profileSubtitle.textContent;
   openPopup(popupProfile);
 });
+
 popupProfileFormButtonClose.addEventListener('click', function () { closePopup(popupProfile) });
 
 popupCardFormButtonOpen.addEventListener('click', function () {
   cardForm.reset();
   openPopup(popupCards);
 });
+
 popupCardFormButtonClose.addEventListener('click', function () { closePopup(popupCards) });
 
 popupImageButtonClose.addEventListener('click', function () { closePopup(popupImage) });
+
 
 
 //Create card from a template
