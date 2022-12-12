@@ -59,7 +59,6 @@ const handleImageButtonClick = (e) => {
   openPopup(popupImage);
 }
 
-
 const openPopup = function (item) {
   item.classList.add('popup_opened');
   item.addEventListener('click', (e) => {
