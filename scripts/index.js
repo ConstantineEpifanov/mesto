@@ -62,23 +62,43 @@ const handleImageButtonClick = (e) => {
 
 const openPopup = function (item) {
   item.classList.add('popup_opened');
+  item.addEventListener('click', (e) => {
+      if (e.target === e.currentTarget) {
+        closePopup(item);
+      }
+    })
+  document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closePopup(item);
+      }
+    })
 };
 
 const closePopup = function (item) {
   item.classList.remove('popup_opened');
+  item.removeEventListener('click', (e) => {
+      if (e.target === e.currentTarget) {
+        closePopup(item);
+      }
+    })
+  document.removeEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closePopup(item);
+      }
+    })
 };
 
 
-function handleProfileFormSubmit(evt) {
-  evt.preventDefault();
+function handleProfileFormSubmit(e) {
+  e.preventDefault();
   profileTitle.textContent = nameInput.value;
   profileSubtitle.textContent = jobInput.value;
   closePopup(popupProfile)
 };
 
 
-function handleCardFormSubmit(evt) {
-  evt.preventDefault();
+function handleCardFormSubmit(e) {
+  e.preventDefault();
   renderCard({
     name: cardTitleInput.value,
     link: cardUrlInput.value
