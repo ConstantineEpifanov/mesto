@@ -41,7 +41,7 @@
         <span class="popup__input-error"></span>
         <input class="popup__input popup__input_edit_status" type="text" name="О себе" value="Исследователь океана" required minlength="2" maxlength="200">
         <span class="popup__input-error"></span>
-        <button class="popup__button" type="submit" value="save">Сохранить</button>
+        <button class="popup__button popup__button_disabled" type="submit" value="save" disabled>Сохранить</button>
       </form>
     </div>
   </div>
@@ -55,7 +55,7 @@
         <span class="popup__input-error"></span>
         <input class="popup__input popup__input_edit_img" type="url" name="Ссылка" placeholder="Ссылка на картинку" required>
         <span class="popup__input-error"></span>
-        <button class="popup__button" type="submit" value="save">Сохранить</button>
+        <button class="popup__button popup__button_disabled" type="submit" value="save" disabled>Сохранить</button>
       </form>
     </div>
   </div>
@@ -81,6 +81,7 @@
 
 
   <script type="module" src="./scripts/index.js"></script>
+  <script type="module" src="./scripts/validate.js"></script>
 </body>
 
 </html>
