@@ -36,9 +36,11 @@
     <div class="popup__container">
       <button type="button" class="popup__close-button popup__close-button_profile"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="popup__form popup__form_profile" name="edit-profile">
-        <input class="popup__input popup__input_edit_name" type="text" name="Имя" value="Жак-Ив Кусто">
-        <input class="popup__input popup__input_edit_status" type="text" name="О себе" value="Исследователь океана">
+      <form class="popup__form popup__form_profile" name="edit-profile" novalidate>
+        <input id="popup-profile-name" class="popup__input popup__input_edit_name" type="text" name="Имя" value="Жак-Ив Кусто" required minlength="2" maxlength="40">
+        <span id="popup-profile-name-error" class="popup__error"></span>
+        <input id="popup-profile-status" class="popup__input popup__input_edit_status" type="text" name="О себе" value="Исследователь океана" required minlength="2" maxlength="200">
+        <span id="popup-profile-status-error" class="popup__error"></span>
         <button class="popup__button" type="submit" value="save">Сохранить</button>
       </form>
     </div>
@@ -48,10 +50,12 @@
     <div class="popup__container">
       <button type="button" class="popup__close-button popup__close-button_card"></button>
       <h2 class="popup__title">Новое место</h2>
-      <form class="popup__form popup__form_card" name="add-card">
-        <input class="popup__input popup__input_edit_title" type="text" name="Название" placeholder="Название">
-        <input class="popup__input popup__input_edit_img" type="url" name="Ссылка" placeholder="Ссылка на картинку">
-        <button class="popup__button" type="submit" value="save">Сохранить</button>
+      <form class="popup__form popup__form_card" name="add-card" novalidate>
+        <input id="popup-card-title" class="popup__input popup__input_edit_title" type="text" name="Название" placeholder="Название" required minlength="2" maxlength="30">
+        <span id="popup-card-title-error" class="popup__error"></span>
+        <input id="popup-card-link" class="popup__input popup__input_edit_img" type="url" name="Ссылка" placeholder="Ссылка на картинку" required>
+        <span id="popup-card-link-error" class="popup__error"></span>
+        <button class="popup__button popup__button_disabled" type="submit" value="save" disabled>Сохранить</button>
       </form>
     </div>
   </div>
@@ -59,7 +63,7 @@
   <div class="popup popup_image">
     <div class="popup__container-image">
       <button type="button" class="popup__close-button popup__close-button_image"></button>
-      <img class="popup__image" src="" alt="">
+      <img class="popup__image" src="#" alt="">
       <p class="popup__image-title"></p>
     </div>
   </div>
@@ -67,7 +71,7 @@
   <template id="card-template">
     <article class="card">
       <button type="button" class="card__button-delete"></button>
-      <img class="card__image" src="" alt="">
+      <img class="card__image" src="#" alt="">
       <div class="card__bottom">
         <h2 class="card__title"></h2>
         <button type="button" class="card__button-like"></button>
@@ -77,6 +81,7 @@
 
 
   <script type="module" src="./scripts/index.js"></script>
+  <script type="module" src="./scripts/validate.js"></script>
 </body>
 
 </html>
