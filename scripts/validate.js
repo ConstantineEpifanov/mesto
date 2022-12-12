@@ -8,10 +8,6 @@ const enableValidation = (data) => {
     const inputs = [...form.querySelectorAll(data.inputSelector)];
     const button = form.querySelector(data.submitButtonSelector);
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-    })
-
     inputs.forEach(input => {
       input.addEventListener('input', () => {
 
@@ -52,11 +48,11 @@ const toggleSaveButton = (inputs, button, data) => {
   const isValid = inputs.every(input => input.validity.valid);
 
   if (isValid) {
-    button.disabled = '';
+    button.disabled = false;
     button.classList.remove(data.inactiveButtonClass);
   }
   else {
-    button.disabled = 'disabled';
+    button.disabled = true;
     button.classList.add(data.inactiveButtonClass);
   }
 }
