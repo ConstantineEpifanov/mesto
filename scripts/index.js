@@ -4,6 +4,7 @@ import { initialCards } from './cards.js'
 const cardForm = document.querySelector('.popup__form_card');
 const cardTitleInput = cardForm.querySelector('.popup__input_edit_title');
 const cardUrlInput = cardForm.querySelector('.popup__input_edit_img');
+const cardSaveButton = cardForm.querySelector('.popup__button');
 
 // Popup containers
 const popupProfile = document.querySelector('.popup_profile');
@@ -60,7 +61,6 @@ const openPopup = function (item) {
   item.classList.add('popup_opened');
   item.addEventListener('click', closePopupOnOverlayClick)
   document.addEventListener('keydown', closePopupOnEsc)
-  enableValidation()
 };
 
 const closePopup = function (item) {
@@ -114,6 +114,8 @@ popupProfileFormButtonOpen.addEventListener('click', function () {
 popupProfileFormButtonClose.addEventListener('click', function () { closePopup(popupProfile) });
 
 popupCardFormButtonOpen.addEventListener('click', function () {
+  cardSaveButton.disabled = true;
+  cardSaveButton.classList.add('popup__button_disabled');
   cardForm.reset();
   openPopup(popupCards);
 });
