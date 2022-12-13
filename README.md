@@ -1,11 +1,11 @@
 # Проект: Место
 
-Четвертая проектная работа и первая проба JavaScript.
+Четвертая, пятая и шестая проектные работа и начало пути в JavaScript.
 
 ### Методы
 
 * HTML
 * CSS
-* JavaScript!
+* JavaScript! (popups, templates, validation)
 
 [**Pages**](https://constantineepifanov.github.io/mesto/)
